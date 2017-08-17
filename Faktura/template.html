@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Faktura</title>
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+	<!-- select2 -->
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" rel="stylesheet" />
+
+	<!-- bootstrap-select  (udgifter)-->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.7.5/css/bootstrap-select.min.css">
+	<link rel="stylesheet" href="css/template.css">
+
+</head>
+
+<body>
+	<div class="grid">
+		<div class="nav">
+
+			<nav class="navbar navbar-default" id="navbarCustom" style="height: 100px">
+				<div class="container-fluid">
+					<!-- Brand and toggle get grouped for better mobile display -->
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+						 aria-expanded="false">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span> 
+						  </button>
+
+						<a class="navbar-brand" href="#">
+							<img id="logo" alt="Brand" src="./lasse-faktura/alpha-logo.png" height="500%">
+						  </a>
+					</div>
+
+					<!-- Collect the nav links, forms, and other content for toggling -->
+					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+						
+						<p class="navbar-text navbar-right">Signed in as <a href="#" class="navbar-link">Jonas Machon</a></p>
+					</div>
+					<!-- /.navbar-collapse -->
+				</div>
+				<!-- /.container-fluid -->
+			</nav>
+			<!-- <img src="./lasse-faktura/alpha-logo.png" align="left"><br>
+			<h1 >Faktura</h1><br> -->
+		</div>
+
+		<!--Customer-->
+		<div class="customer">
+			<!--First row-->
+
+
+			<div id="cust_1r1c">
+				<h5><strong>Kunde:</strong></h5>
+			</div>
+
+			<div id="cust_1r2c">
+				<div class="btn-style">
+					<select id="cust-select" class="selectpicker form-control" data-style="btn-default" data-live-search="true" title="Søg: Kunde">
+						<option class="show-project-collapse">Ikea</option>
+						<option class="hide-project-collapse">Toys `r us</option>
+						<option class="hide-project-collapse">Tivoli</option>
+						<option class="hide-project-collapse">Nordisk Film Biografer</option>
+						<option class="hide-project-collapse">Bakken</option>
+						<option class="hide-project-collapse">Christiansborg</option>
+					</select>
+				</div>
+			</div>
+
+			<!--Second row-->
+			<div id="cust_2r1c" class="collapse project-collapse">
+				<h5 id="label"><strong>Projekt:</strong></h5>
+			</div>
+			<div id="cust_2r2c" class="collapse project-collapse">
+
+
+				<div class="form-group btn-style">
+					<!-- <div class="dropdown"> -->
+
+					<input type="search" class="form-control dropdown-toggle" data-toggle="dropdown" placeholder="Søg: Projekt">
+					<div class="jumbotron" style="padding:5px">
+						<input type="checkbox" class="" checked> Vælg alle</input>
+						<br><br>
+						<input type="checkbox" value="" checked> Database<br>
+						<input type="checkbox" value="" checked> JavaScript<br>
+						<input type="checkbox" value="" checked> CSS<br>
+
+						<!-- </div> -->
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+		<!--Hours-->
+		<div class="hours">
+			<!-- First row -->
+			<div id="invHours">
+				<h5><strong>Fakturerbarer timer:</strong></h5>
+			</div>
+
+			<div id="hoursOpt">
+				<div class="btn-group-vertical btn-style">
+
+					<button class="btn btn-default btn-text hide-collapse btnClicked">
+						Alle ikke-fakturerede fakturerbare timer<checkicon class="pull-right btn-check"></checkicon>
+					</button>
+
+					<button class="btn btn-default btn-text show-collapse btnClicked">
+						Inkludér ikke-faktureret fakturerbarer timer fra: 
+						<select id="periodSelect" class="selectpicker" data-style="btn-default btn-xs" data-width="30%" >
+							<option value="month">Denne måned</option>
+							<option value="lastMonth">Sidste måned</option>
+							<option value="quater">Dette kvartal</option>
+							<option value="lasQuater">Sidste kvartal</option>
+							<option value="custom">Brugerdefineret</option>
+						</select>
+						<checkicon class="pull-right btn-check"></checkicon>
+					</button>
+
+					<div id="collapse1">
+						<div id="date" class="hidden form-inline">
+							Fra: <input class="form-control" type="date" placeholder="Dato"></input>
+							Til: <input class="form-control" type="date" placeholder="Dato"></input>
+						</div>
+					</div>
+
+					<button class="btn btn-default btn-text hide-collapse btnClicked">Ekskluder timer<checkicon class="pull-right btn-check"></checkicon></button>
+				</div>
+			</div>
+
+			<!-- Second row-->
+			<div id="invType">
+				<h5><strong>Faktura type:</strong></h5>
+			</div>
+
+			<div id="invTypeOpt" class="btn-group">
+				<select class="js-example-basic-multiple" multiple="multiple" data-width="70%">
+					<option>Projekt</option>
+					<option>Medarbejder</option>
+					<option>Task</option>
+					<option>Label</option>
+				</select>
+			</div>
+		</div>
+
+		<div class="indhold subgrid">
+			<div class="header">
+				<div class="info">
+
+					<div><strong>Fakturanummer:</strong> 10</div>
+					<div><strong>Firma:</strong> Alpha Solutions</div>
+					<div><strong>Adresse:</strong> Gothersgade 14, 4th floor DK-1123 Copenhagen K Denmark.</div><br>
+
+				</div>
+
+
+				<div class="po-date">
+					<div class="input-group-vertical pull-right">
+						<input type="text" class="form-control form-control-header" width="500px;" placeholder="po-number">
+
+						<input type="date" class="form-control form-control-header" placeholder="issue-date">
+
+						<select class="selectpicker show-tick form-control-header" title="Betalingsbetingelser">
+							<option>15 Dage</option>
+							<option>60 Dage</option>
+							<option>90 Dage</option>
+						</select>
+					</div>
+				</div>
+
+
+
+			</div>
+			<div class="linier">
+				<div class="invoice-lines">
+					<div class="lines lines-header">
+						<div></div>
+						<div class="item-type">Vare Type</div>
+						<div class="descr">Beskrivelse</div>
+						<div class="amount">Antal</div>
+						<div class="unit-price">Enhedspris</div>
+						<div class="discount">Rabat</div>
+						<div class="vat">Moms</div>
+						<div class="total">Total</div>
+					</div>
+					<hr>
+					<div class="lines">
+						<button class="btn glyphicon glyphicon-trash require-comment-delete"></button>
+						<div class="form-group">
+							<select class="form-control btn-size">
+								<option>Ydelse</option>
+								<option>Vare</option>                        
+							</select>
+						</div>
+						<textarea class="form-control">test</textarea>
+						<input type="number" class="form-control input-size require-comment" value="1">
+						<input type="number" class="form-control input-size require-comment" value="1500">
+						<input type="text" class="form-control input-size require-comment" value="15%">
+						<input type="text" class="form-control input-size require-comment" value="25%">
+						<input type="number" class="form-control input-size require-comment" value="1500">
+					</div>
+					<div class="price-comment hidden">
+						<label for="comment">Kommentar til pris ændringer: </label>
+						<textarea rows="6" class="form-control comment" required></textarea>
+						<button class="hide-require btn">Gem</button>
+					</div>
+					<hr>
+					<div class="lines lines-delete">
+						<button class="btn require-comment-delete glyphicon glyphicon-trash"></button>
+						<div class="form-group">
+							<select class="form-control btn-size">
+								<option>Ydelse</option>
+								<option>Vare</option>                        
+							</select>
+						</div>
+						<textarea class="form-control">test</textarea>
+						<input type="number" class="form-control input-size require-comment" value="1">
+						<input type="number" class="form-control input-size require-comment" value="1300">
+						<input type="text" class="form-control input-size require-comment" value="15%">
+						<input type="text" class="form-control input-size require-comment" value="25%">
+						<input type="number" class="form-control input-size require-comment" value="1000">
+					</div>
+					<div class="delete-comment hidden">
+						<label for="comment">Kommentar til pris ændringer: </label>
+						<textarea rows="6" class="form-control comment" required></textarea>
+						<button class="btn hide-require-cancel">Fortryd</button>
+						<button class="btn hide-require-delete">Slet linje</button>
+					</div>
+					<hr>
+				</div>
+				<div class="line-footer">
+					<div class="total-footer"><strong>Total:</strong></div>
+					<div><strong>2800</strong></div>
+
+				</div>
+				<button class="btn btn-add btn-add-size">tilføj</button>
+
+			</div>
+
+			<div class="note">
+				<div class="note">
+					<label for="note">Notes: </label>
+					<textarea class="form-control" rows="5" id="note"></textarea>
+				</div>
+			</div>
+			<div class="btn-confirm">
+				<button class="btn btn-add-size">Gem kladde</button>
+				<button class="btn btn-add-size">Udkast</button>
+				<button class="btn btn-add-size">Send faktura</button>
+			</div>
+		</div>
+		<div class="footer">
+			Footer
+		</div>
+	</div>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
+<!-- bootstrap-select  (expences)-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.7.5/js/bootstrap-select.min.js"></script>
+
+<script>
+	$(document).ready(function () {
+		$(".js-example-basic-multiple").select2({
+			placeholder: "Sorter efter..."
+		});
+		$('#collapse1').addClass('hidden');
+
+		$("#cust-select").selectpicker({
+			placeholder: "Sorter efter..."
+		});
+
+	});
+
+	$('#periodSelect').on('change', function () {
+		if (this.value == 'custom') {
+			$("#date").removeClass('hidden');
+		}
+		else {
+			$("#date").addClass('hidden');
+		}
+	});
+
+
+
+	//Green check icon on btn
+	$('.btnClicked').click(function () {
+		$('.btnClicked').find('checkicon').removeClass('btn glyphicon glyphicon-ok');
+		$(this).find('checkicon').toggleClass('btn glyphicon glyphicon-ok').toggleClass('btn');
+	});
+	$('.expence-btnClicked').click(function () {
+		$('.expence-btnClicked').find('checkicon').removeClass('btn glyphicon glyphicon-ok');
+		$(this).find('checkicon').toggleClass('btn glyphicon glyphicon-ok').toggleClass('btn');
+	});
+
+
+
+
+
+	// collapse inside hours
+	$('.hide-collapse').click(function () {
+		$('#collapse1').collapse('hide');
+	});
+
+	$('.show-collapse').click(function () {
+		$('#collapse1').removeClass('hidden');
+		$('#collapse1').collapse('show');
+	})
+
+
+	// collapse inside expences
+	$(document).ready(function () {
+		$(".show-expence-collapse ").click(function () {
+			$(".expence-collapse").collapse('show');
+		});
+		$(".hide-expence-collapse ").click(function () {
+			$(".expence-collapse").collapse('hide');
+		});
+		$(".show-custom-dates").click(function () {
+			$(".custom-dates").collapse('show');
+		});
+		$(".hide-custom-dates").click(function () {
+			$(".custom-dates").collapse('hide');
+		});
+
+		// collapse inside customer 
+		$('.hide-project-collapse').click(function () {
+			$('.project-collapse').collapse('hide');
+		});
+		$('.show-project-collapse').click(function () {
+			$('.project-collapse').collapse('show');
+		})
+	});
+
+	//Lines
+
+	$('.btn-add').click(function () {
+		$(".invoice-lines").append('<div class="lines"><button class="btn glyphicon glyphicon-trash require-comment-delete"></button><div class="form-group"><select class="form-control btn-size"><option>Ydelse</option><option>Vare</option></select></div><textarea class="form-control"></textarea><input type="number" class="form-control input-size"><input type="number" class="form-control input-size"><input type="text" class="form-control input-size"><input type="text" class="form-control input-size"><input type="number" class="form-control input-size"></div><br><button class="btn btn-primary glyphicon glyphicon-file"></button>Tilføj fil<hr>');
+	});
+
+	$('.require-comment').on('input', function () {
+		$(".price-comment").removeClass('hidden');
+	});
+
+	$(".hide-require").click(function () {
+		$(".price-comment").addClass('hidden');
+	})
+
+	$('.require-comment-delete').click(function () {
+		$(".delete-comment").removeClass('hidden');
+
+	});
+	$(".hide-require-delete").click(function () {
+		$(".delete-comment").addClass('hidden');
+		$(".lines-delete").addClass('hidden');
+	})
+
+	$(".hide-require-cancel").click(function () {
+		$(".delete-comment").addClass('hidden');
+	});
+
+</script>
+
+</html>

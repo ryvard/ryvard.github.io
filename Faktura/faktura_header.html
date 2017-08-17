@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+	<title>Faktura header</title>
+
+	<!-- Bootstrap -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">	
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/css/bootstrap-select.min.css">
+	<link rel="stylesheet" href="css/faktura_header.css">
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+      <![endif]-->
+  </head>
+  <body>
+
+  	<div class="grid">
+  		<div class="info">
+  			<div class="addess-template">
+  				<div><strong>Faktura ID:</strong> 10</div>
+  				<div><strong>Firma:</strong> Alpha Solutions</div>
+  				<div><strong>Adresse:</strong> Gothersgade 14, 4th floor DK-1123 Copenhagen K Denmark.</div><br>
+  			</div>
+  		</div>
+  		<div class="po-date">
+  			<div>
+  				<input type="text" class="form-control" placeholder="po-number">
+  			</div>
+  			<div>
+  				<input type="date" class="form-control" placeholder="issue-date">
+  			</div>
+  			<div>
+  				<select class="selectpicker show-tick" title="Forfaldsdato">  					 				
+  					<option>15 Dage</option>
+  					<option>60 Dage</option>
+  					<option>90 Dage</option> 
+  				</select> 				
+  			</div>	
+  		</div>
+  		<div class="payment">
+  			<div class="tax">
+  				<input type="number" class="form-control" placeholder="Moms %">
+  			</div>
+  			<div class="discount">
+  				<input type="number" class="form-control" placeholder="Rabat %">
+  			</div>
+  			<div class="currency">
+  				<select class="selectpicker show-tick select-size" 	title="Valuta">
+  					<option value="DKK">DKK</option>
+  					<option value="Dollar">Dollar</option>
+  					<option value="Euro">Euro</option>
+  				</select>
+  			</div>
+  		</div>
+
+  		
+  	</div> 
+
+
+  	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  	<!-- Include all compiled plugins (below), or include individual files as needed -->
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/js/bootstrap-select.min.js"></script>
+  </body>
+  </html>
+

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faktura</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/faktura_lines.css">
+
+
+</head>
+
+<body>
+    <div class="grid">
+        <div class="invoice-lines">
+            <div class="lines lines-header">
+                <div class="item-type">Vare Type</div>
+                <div class="descr">Beskrivelse</div>
+                <div class="amount">Antal</div>
+                <div class="unit-price">Enhedspris</div>
+                <div class="discount">Rabat</div>
+                <div class="vat">Moms</div>
+                <div class="total">Total</div>
+            </div>
+            <hr>
+            <div class="lines">
+                <div class="form-group">
+                    <select class="form-control btn-size">
+                        <option>Ydelse</option>
+                        <option>Vare</option>                        
+                    </select>
+                </div>
+                <textarea class="form-control">test</textarea>
+                <input type="number" class="form-control input-size require-comment" value="1">
+                <input type="number" class="form-control input-size require-comment" value="1500">
+                <input type="number" class="form-control input-size require-comment" value="1500">
+            </div>
+            <hr>
+            <div class="lines">
+                <div class="form-group">
+                    <select class="form-control btn-size">
+                        <option>Ydelse</option>
+                        <option>Vare</option>                        
+                    </select>
+                </div>
+                <textarea class="form-control">test</textarea>
+                <input type="number" class="form-control input-size require-comment" value="1">
+                <input type="number" class="form-control input-size require-comment" value="1300">
+                <input type="number" class="form-control input-size require-comment" value="1000">
+            </div>
+            <hr>
+        </div>
+        
+        <button class="btn btn-add btn-add-size">tilføj</button>
+        <div class="price-comment hidden">    
+            <label for="comment">Kommentar til pris ændringer: </label>
+            <textarea rows="6" class="form-control comment" required></textarea>
+            <button class="hide-require btn">Gem</button>     
+        </div>        
+    </div>
+
+</body>
+<script>
+    $('.btn-add').click(function() {
+        $(".invoice-lines").append('<div class="lines"><div class="form-group"><select class="form-control btn-size"><option>Ydelse</option><option>Vare</option></select></div><textarea class="form-control"></textarea><input type="number" class="form-control input-size"><input type="number" class="form-control input-size"><input type="number" class="form-control input-size"></div><hr>');
+    });
+
+    $('.require-comment').on('input', function(){
+        $(".price-comment").removeClass('hidden');
+    });
+
+    $(".hide-require").click(function(){
+        $(".price-comment").addClass('hidden');
+    })
+
+</script>
+
+</html>

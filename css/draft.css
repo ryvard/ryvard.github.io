@@ -1,0 +1,20 @@
+.grid {
+	display: grid;
+	grid-template-columns: 1fr 6fr 1fr;
+	grid-template-rows: 10fr 5fr 80fr 15fr 5fr;
+	border: 1px solid black;
+	grid-gap: 0.2vw;
+	height: 500px;
+}
+
+.nav {
+	grid-row: 1/2;
+	grid-column: 1/4;
+	background: #eee;
+}
+
+.draft-header {
+	grid-row: 2/3;
+	grid-column: 2/3;
+	background: #ddd;
+}

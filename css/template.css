@@ -1,0 +1,311 @@
+/* css grid layout*/
+
+.grid {
+	display: grid;
+	grid-template-columns: 0.75fr 2.5fr 0.75fr;
+	grid-template-areas: "nav nav nav" ". customer ." ". hours ." ". expences ." ". indhold ." "footer footer footer";
+	border: 2px solid black;
+	grid-gap: 10px;
+}
+
+.nav {
+	grid-area: nav;
+}
+
+.customer {
+	display: grid;
+	grid-area: customer;
+	grid-template-columns: 1fr 4fr;
+	grid-column-gap: 10px;
+	grid-row-gap: 15px;
+	grid-template-areas: "cust_1r1c cust_1r2c" "cust_2r1c cust_2r2c";
+	padding-left: 10px;
+}
+.customer > div {
+	padding: 5px;
+}
+
+#cust_1r1c {
+	grid-area: cust_1r1c;
+	text-align: right;
+}
+
+
+#cust_1r2c {
+	grid-area: cust_1r2c;
+}
+#cust_2r1c {
+	grid-area: cust_2r1c;	
+	text-align: right;
+	
+}
+
+.hours {
+	display: grid;
+	grid-area: hours;
+	grid-template-columns: 1fr 4fr;
+	grid-column-gap: 10px;
+	grid-row-gap: 15px;
+	grid-template-areas: "invHours hoursOpt" "invType invTypeOpt";
+	padding-left: 10px;
+
+}
+
+.hours > div {
+	padding: 5px;
+}
+
+/*hours areas*/
+
+#invHours {
+	grid-area: invHours;
+	text-align: right;
+}
+
+#invType {
+	grid-area: invType;
+	text-align: right;
+}
+
+/*hours areas slut*/
+.expences {
+	display: grid;
+	grid-area: expences;
+	grid-template-columns: 1fr 4fr;
+	grid-column-gap: 10px;
+	grid-row-gap: 15px;
+	grid-template-areas: "1r1c 1r2c" "2r1c 2r2c" "3r1c 3r2c";
+	padding-left: 10px;
+}
+
+.expences > div {
+	padding: 5px;
+}
+
+.indhold {
+	border: solid 1px #eee;
+	padding: 20px;
+	grid-area: indhold;
+}
+
+.header {
+	
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-areas: "info po-date";
+	grid-area: header;
+	
+}
+
+
+.linier {
+	grid-area: linier;
+}
+
+.note {
+	grid-area: note;
+}
+
+.footer {
+	grid-area: footer;
+	text-align: center;
+}
+
+
+/* Style fælles */
+
+.btn-text {
+	text-align: left !important;
+}
+
+.btn-style {
+	width: 70%;
+}
+
+/* hours style */
+
+.btn-check {
+	color: green;
+}
+
+/* hours layout */
+#date {
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+
+/* hours layout slut */
+
+
+
+
+
+/* grid div + subgrid + subgrid div */
+
+.grid > div {
+	/* border: solid black; */
+}
+
+.grid > div:nth-child(odd) {
+	/* background: #eee; */
+}
+
+.grid > div:nth-child(even) {
+	/* background: #ddd; */
+}
+
+.subgrid {
+	display: grid;
+	grid-template-areas: "header" "linier" "note";
+	grid-gap: 5px;
+}
+
+
+.subgrid > div {
+	/* border: solid black; */
+}
+
+.subgrid > div:nth-child(odd) {
+	/* background: #bbb; */
+}
+
+.subgrid > div:nth-child(even) {
+	/* background: #ccc; */
+}
+/* 
+.subgrid {
+	display: grid;
+	grid-template-columns: 1fr 10fr 1fr;
+	grid-template-areas: ". . ." ". header ." ". linier ." ". note. ";
+	grid-gap: 5px;
+} */
+
+/* Lines */
+
+
+.lines-header {
+    background: #eee;
+    height: 3vh;
+    align-items: center;
+}
+
+.invoice-lines {
+    grid-column: 2/3;
+}
+
+.lines {
+    display: grid;
+    grid-template-columns: 0.5fr 1.5fr 4fr 1fr 1fr 1fr 1fr 1fr;    
+    grid-column: 2/3;
+    grid-column-gap: 0.5vw;
+    text-align: center;
+}
+
+.line-footer {
+	display: grid;
+	grid-template-columns: 12.5fr 1fr;
+	background-color: #eee;
+	text-align: right;
+}
+
+.total-footer {
+	grid-column: 1/2;
+}
+
+.btn-size {
+    width:  90%;      
+}
+
+.btn-add-size {
+    width: 20%;
+}
+
+.btn-add {
+	margin-top: 1vh;
+	margin-bottom: 1vh;
+    grid-column: 2/3;
+    grid-row: end;
+    
+}
+
+.input-size {
+    width: 85%;
+    margin-left: 15%;
+}
+
+.input-description {
+    width: 95%;
+}
+
+.price-comment {
+    padding-top: 3vh;
+    padding-left: 1.5vw;
+    padding-right: 1.5vw;
+    grid-column: 2/3;
+    background: #eee;
+    align-items: center;
+    padding: 30px;
+    margin-top: 1vw;
+}
+
+.require-comment-delete {
+	height: 60%;
+	padding: 0px;
+}
+
+/* Note */
+
+.note {
+	padding-top: 0.5vw;
+	padding-left: 1vw;
+	padding-right: 1vw;
+	padding-bottom: 1.5vh;
+	background: #eee;
+}
+
+/* faktura header */
+
+.po-date {
+
+	
+	grid-area: po-date;
+}
+
+.info {
+
+	grid-area: info;
+}
+
+/*
+
+
+.tax {
+	grid-area: tax;
+}
+
+.payment {
+	grid-area: payment;
+	align-self: end;
+}
+
+.discount {
+	grid-area: discount;
+
+}
+
+.currency {
+	grid-area: currency;
+} */
+
+.check-mark {
+	color: green;
+}
+
+.address-template {
+	grid-area: address-template;
+}
+
+.form-control-header {
+	width: 100%;
+}

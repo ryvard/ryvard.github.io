@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+	<title>Form</title>
+
+	<!-- Bootstrap -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
+
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+      <![endif]-->
+  </head>
+
+  <body>
+  	
+  	<div class="container">
+  		<br>
+  		<img src="alpha-logo.png" align="left"><br>
+		  <h1 style="text-align: center; ">Faktura</h1><br>
+		  
+
+		  
+  		<!-- Søgebar for kunde -->
+  		
+  		<div class="form-group">
+  			<label>Kunde:</label>
+  			<div class="dropdown">
+  				<center><input id="templateSearch" type="search" class="dropdown-toggle form-control btn-sidebar" data-toggle="dropdown"
+  					placeholder="Søg: Kunde">
+  					<ul class="dropdown-menu">
+  						<li><a href="#" data-toggle="collapse" data-target="#1">Ikea<span aria-hidden="true"></span></a></li>
+  						<li><a href="#" data-toggle="collapse" data-target="#2">Toys `r us<span true></a></li>
+  						<li><a href="#" data-toggle="collapse" data-target="#demo">Tivoli<span aria-hidden="true"></a></li>
+  						<li><a href="#" data-toggle="collapse" data-target="#demo">Nordisk Film Biografer<span aria-hidden="true"></a></li>
+  						<li><a href="#" data-toggle="collapse" data-target="#demo">Bakken<span aria-hidden="true"></a>
+  						</li>
+  						<li><a href="#" data-toggle="collapse" data-target="#demo">Christiansborg<span aria-hidden="true"></a>
+  						</li>
+  					</ul>
+  				</center>
+  			</div>
+  		</div>
+  		
+  		
+  		<!-- Søgebar for projekt -->
+  		<div class="form-group" id="1" hidden="true">
+  			<label>Projekt:</label>
+  			<div class="dropdown">
+  				<input type="search" class="dropdown-toggle form-control btn-sidebar" data-toggle="dropdown"
+  				placeholder="Søg: Projekt">
+  				<div class="jumbotron">
+  					<input type="checkbox" value="" checked>Marker / Umarker alle<br><br>
+  					<input type="checkbox" value="" checked>Database<br>
+  					<input type="checkbox" value="" checked>JavaScript<br>  						 						
+  					<input type="checkbox" value="" checked>CSS<br>
+  				</div>
+  			</div>
+  		</div>
+
+  		<div class="form-group" id="2" hidden="true">
+  			<label>Projekt:</label>
+  			<div class="dropdown">
+  				<input type="search" class="dropdown-toggle form-control btn-sidebar" data-toggle="dropdown"
+  				placeholder="Søg: Projekt">
+  				<div class="jumbotron">
+  					<input type="checkbox" value="" checked>Database<br>
+  					<input type="checkbox" value="" checked>JavaScript<br>  						 						
+  					<input type="checkbox" value="" checked>CSS<br>
+  				</div>
+  			</div>
+  		</div>
+
+  	</div>
+  </div>
+</div>
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->   
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>	
+</body>
+</html>

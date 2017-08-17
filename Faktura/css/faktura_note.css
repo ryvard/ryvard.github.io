@@ -1,0 +1,14 @@
+.grid {
+	display: grid;
+	padding: 1%;
+	margin-left: 20%;
+	margin-right:  20%;
+	background: #eee;
+}
+
+.note {
+	margin-left: 5%;
+	margin-right: 5%;
+	margin-bottom: 8%;
+}
+

@@ -1,0 +1,51 @@
+.grid {
+	display: grid;
+	grid-template-columns: 2fr 4fr 4fr 2fr;
+	grid-template-areas: 
+	". info payment ."
+	". po-date payment .";
+}
+
+.po-date {
+	grid-area: po-date;
+}
+
+.info {
+	grid-area: info;
+	
+}
+
+.tax {
+	grid-area: tax;
+}
+
+.payment {
+	grid-area: payment;
+	align-self: end;
+}
+
+.discount {
+	grid-area: discount;
+
+}
+
+.currency {
+	grid-area: currency;
+}
+
+.check-mark {
+	color: green;
+}
+
+.address-template {
+	grid-area: address-template;
+}
+
+.form-control {
+	width: 60%;
+}
+
+.bootstrap-select {
+	width: 60% !important;
+}
+
